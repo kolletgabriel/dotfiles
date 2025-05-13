@@ -14,7 +14,7 @@ return {
                 'dockerfile',
                 'bash',
                 'c',
-                'markdown'
+                'markdown',
             }
         })
     end
