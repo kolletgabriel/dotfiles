@@ -1,0 +1,3 @@
+feh --bg-fill --no-fehbg "$HOME/wallpapers/marco-aurelio.png"
+picom &
+exec i3
