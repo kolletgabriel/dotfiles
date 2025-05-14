@@ -34,8 +34,7 @@ alias gpsh="git push"
 
 # Main programs:
 alias nv="nvim"
-alias vi="nvim --noplugin"
-alias snv="sudo nvim"
+alias vi="nvim --noplugin"  # as a lite and fast fallback
 alias py="python"
 
 # Misc:
