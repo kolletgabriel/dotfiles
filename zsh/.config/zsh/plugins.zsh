@@ -12,3 +12,5 @@ zinit light Aloxaf/fzf-tab
 zinit light zdharma-continuum/fast-syntax-highlighting
 zinit light zsh-users/zsh-autosuggestions
 zinit light jeffreytse/zsh-vi-mode
+zvm_bindkey vicmd '^ ' autosuggest-execute
+zvm_bindkey viins '^ ' autosuggest-execute
