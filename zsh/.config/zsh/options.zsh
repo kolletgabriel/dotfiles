@@ -5,10 +5,14 @@ setopt auto_cd
 setopt cd_silent
 setopt cdable_vars
 
+# Completion
+# setopt menu_complete  # leave it to fzf.
+
 # Expansion and globbing:
 setopt extended_glob
+setopt glob_dots
 setopt magic_equal_subst
-setopt no_case_glob
+# setopt no_case_glob  # it interfers with case-insensitive matching!
 setopt no_nomatch
 
 # History:
