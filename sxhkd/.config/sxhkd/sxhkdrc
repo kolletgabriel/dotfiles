@@ -1,0 +1,32 @@
+super + Return
+    alacritty
+
+super + space
+    rofi -show drun
+
+super + b
+    $BROWSER
+
+# Focus on and swaping windows:
+super + {_,shift +} {h,j,k,l}
+	bspc node -{f,s} {west,south,north,east}
+
+# Go to or send window to workspace:
+super + {_,shift +} {1-9,0}
+	bspc {desktop -f,node -d} '^{1-9,10}'
+
+# Close or kill window:
+super + {_,Shift + }q
+    bspc node -{c,k}
+
+# Screenshot:
+Print
+    shotgun -f 'png' "/tmp/$(date +%Y-%m-%d_%H-%M-%S).png"
+
+# Audio fn keys:
+XF86Audio{Mute,LowerVolume,RaiseVolume}
+    pamixer -{\
+        t && pkill -RTMIN+1 i3blocks,\
+        d 5 && pkill -RTMIN+1 i3blocks,\
+        i 5 && pkill -RTMIN+1 i3blocks\
+    }
