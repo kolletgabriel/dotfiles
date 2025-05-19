@@ -22,3 +22,8 @@ export XAUTHORITY="$XDG_RUNTIME_DIR/Xauthority"
 
 # __pycache__ dirs should be in ~/.cache:
 export PYTHONPYCACHEPREFIX="$XDG_CACHE_HOME/python"
+
+# Default applications:
+export TERM="alacritty"
+export TERMINAL="alacritty"
+export EDITOR="nvim"
