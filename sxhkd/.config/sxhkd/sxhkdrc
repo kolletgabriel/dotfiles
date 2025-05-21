@@ -1,5 +1,5 @@
 super + Return
-    alacritty
+    $TERMINAL
 
 super + space
     rofi -show drun

@@ -24,6 +24,6 @@ export XAUTHORITY="$XDG_RUNTIME_DIR/Xauthority"
 export PYTHONPYCACHEPREFIX="$XDG_CACHE_HOME/python"
 
 # Default applications:
-export TERM="alacritty"
-export TERMINAL="alacritty"
-export EDITOR="nvim"
+export TERM="alacritty"  # for terminfo
+export TERMINAL="/usr/bin/alacritty"
+export EDITOR="/usr/bin/nvim"
