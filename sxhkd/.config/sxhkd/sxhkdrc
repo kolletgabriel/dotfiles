@@ -1,13 +1,35 @@
+# Default Applications
+# ==============================================================================
+
+# Terminal emulator:
 super + Return
     $TERMINAL
 
-super + space
-    rofi -show drun
+# Application launcher:
+super + {_,shift +} space
+    rofi -show {drun,power-menu -modi power-menu:rofi-power-menu}
 
-super + b
-    $BROWSER
+# Web browsers:
+super +{_,shift +} b
+    {$BROWSER,$BROWSER2}
 
-# Focus on and swaping windows:
+# Screenshot:
+super + {_,alt +} {_,shift +, ctrl +} Print
+    ~/.local/bin/bspwm-actions/screenshot.sh \
+    {'toclip','noclip'} {'full','win','area'}
+
+# Terminal utilities for quick and simple tasks:
+super + u; {p,h}
+    ~/.local/bin/bspwm-actions/quick-term.sh {\
+        "Python" python,\
+        "Htop" htop\
+    }
+
+
+# BSPWM
+# ==============================================================================
+
+# Focus on or swap windows:
 super + {_,shift +} {h,j,k,l}
 	bspc node -{f,s} {west,south,north,east}
 
@@ -16,17 +38,41 @@ super + {_,shift +} {1-9,0}
 	bspc {desktop -f,node -d} '^{1-9,10}'
 
 # Close or kill window:
-super + {_,shift + }q
+super + {_,shift +} q
     bspc node -{c,k}
 
-# Screenshot:
-Print
-    shotgun -f 'png' "/tmp/$(date +%Y-%m-%d_%H-%M-%S).png"
+# Resize window:
+super + ctrl + {h,j,k,l}
+    ~/.local/bin/bspwm-actions/resize.sh {west,south,north,east} 20
 
-# Audio fn keys:
+# Equalize all window splits:
+super + e
+    bspc node @/ -E
+
+# Rotate layout clockwise or counter-cloclwise:
+super + {_,shift +} r
+	bspc node @/ -R {90,-90}
+
+# Flip layout vertically or horizontally:
+super + {_,shift +} f
+    bspc node @/ -F {vertical,horizontal}
+
+
+# Function keys:
+# ==============================================================================
+
+# Audio:
 XF86Audio{Mute,LowerVolume,RaiseVolume}
     pamixer -{\
         t && pkill -RTMIN+1 i3blocks,\
         d 5 && pkill -RTMIN+1 i3blocks,\
         i 5 && pkill -RTMIN+1 i3blocks\
     }
+
+
+# Miscelaneous
+# ==============================================================================
+
+# Reset this configuration:
+super + BackSpace
+  pkill -USR1 -x sxhkd
