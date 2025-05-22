@@ -3,7 +3,7 @@
 capacity="$(cat /sys/class/power_supply/BAT0/capacity)"
 status="$(cat /sys/class/power_supply/BAT0/status)"
 
-if [ "$status" = 'Charging' ]; then
+if [ "$status" = 'Charging' ] || [ "$status" = 'Not charging' ]; then
     echo "󰚥 $capacity%"
 else
     if (( "$capacity" == 0 )); then
