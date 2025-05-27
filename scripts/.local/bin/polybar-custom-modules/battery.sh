@@ -34,16 +34,16 @@ function format_time() {
 
 
 function show() {
-    status="$(cat /sys/class/power_supply/BAT0/status)"
+    ac_on="$(cat /sys/class/power_supply/AC/online)"
     capacity="$(cat /sys/class/power_supply/BAT0/capacity)"
     time_remaining="$(acpi | cut -d ',' -f 3 | cut -d ' ' -f 2)"
 
     what_to_show="$capacity%"
     [ "$1" = 'time' ] && what_to_show="$(format_time $time_remaining)"
 
-    if [ "$status" = 'Charging' ]; then
+    if [ "$ac_on" -eq 1 ] && [ -n "$time_remaining" ]; then
         echo "󰂄 $what_to_show"
-    elif [ "$status" = 'Not charging' ] || [ $status = 'Full' ]; then
+    elif [ "$ac_on" -eq 1 ] && [ -z "$time_remaining" ]; then
         echo "󰂄 FULL"
     else
         if (( "$capacity" == 0 )); then
