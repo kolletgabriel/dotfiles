@@ -20,13 +20,14 @@ alias cp="cp -i"
 alias mv="mv -i"
 alias grep="grep --color=always"
 
-# Pacman:
+# Pacman/Yay:
 alias pqs="pacman -Qs"
 alias pqi="pacman -Qii"
 alias pss="pacman -Ss"
+alias yss="yay -Ss --aur"  # using yay's search only for AUR packages
 alias psi="pacman -Sii"
 alias ins="sudo pacman -S"
-alias upg="sudo pacman -Syu"
+alias upg="yay"  # updates AUR packages too
 alias rmv="sudo pacman -Rnsu"
 
 # Git:
