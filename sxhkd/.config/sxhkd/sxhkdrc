@@ -10,7 +10,7 @@ super + {_,shift +} space
     rofi -show {drun,power-menu -modi power-menu:rofi-power-menu}
 
 # Web browsers:
-super +{_,shift +} b
+super + {_,shift +} b
     {$BROWSER,$BROWSER2}
 
 # Screenshot:
