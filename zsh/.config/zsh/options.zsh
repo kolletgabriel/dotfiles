@@ -34,3 +34,4 @@ PS2='%B%F{grey}❯❯ %f%b'
 
 # Zle:
 setopt nobeep
+zle_highlight+=('paste:none')
