@@ -7,5 +7,8 @@ source "$ZDOTDIR/completions.zsh"
 # Source history fuzzy-finding script provided by fzf itself:
 zvm_after_init_commands+=('source <(fzf --zsh)') # workaround for the zvm plugin
 
+# Initializing zoxide:
+eval "$(zoxide init zsh)"
+
 # Last but obviously not least:
 fastfetch
