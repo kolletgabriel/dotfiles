@@ -43,6 +43,7 @@ alias gpsh="git push"
 alias nv="nvim"
 alias vi="nvim --noplugin"  # as a lite and fast fallback
 alias py="python"
+alias t="task"
 
 # Misc:
 alias ff="fastfetch"
