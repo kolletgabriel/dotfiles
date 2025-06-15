@@ -1,0 +1,18 @@
+[notebook]
+dir = "$NOTES"
+
+[note]
+filename = "{{id}}-{{slug title}}"
+id-charset = "hex"
+id-length = 3
+template = "default.md"
+
+[group.journal]
+paths = ["1-pessoais/_diarios"]
+
+[group.journal.note]
+filename = "{{format-date now}}"
+template = "journal.md"
+
+[tool]
+# pager = "glow -p"
