@@ -1,1 +1,27 @@
-news.version=3.4.1
+news.version=3.4.1  # written by the program itself
+data.location=$XDG_DATA_HOME/task
+
+# Simplifying urgency evaluation:
+urgency.age.coefficient=0
+urgency.annotations.coefficient=0
+urgency.blocking.coefficient=0
+urgency.project.coefficient=0
+urgency.tags.coefficient=0
+
+# Customizing `next` (the default) report:
+report.next.columns=id,project,tags,priority,description.count,urgency
+report.next.filter=status:pending -maybe -inbox -WAITING (pri:H or pri:M) limit:page
+report.next.labels=ID,Project,Tags,Priority,Description,Urg.
+report.next.sort=start-,urgency-,project+
+
+# Report for GTD's inbox:
+report.inbox.description=Inbox
+report.inbox.columns=id,description.desc
+report.inbox.labels=ID,Description
+report.inbox.filter=status:pending +inbox
+
+# Report for GTD's "maybe" section:
+report.maybe.description=Maybe
+report.maybe.columns=id,description.desc
+report.maybe.labels=ID,Description
+report.maybe.filter=status:pending +maybe
