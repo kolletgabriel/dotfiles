@@ -20,6 +20,9 @@ export XPROFILE="$XDG_CONFIG_HOME/xorg/xprofile"
 export XRESOURCES="$XDG_CONFIG_HOME/xorg/xresources"
 export XAUTHORITY="$XDG_RUNTIME_DIR/Xauthority"
 
+# npm stuff:
+export NPM_CONFIG_USERCONFIG="$XDG_CONFIG_HOME/npm/npmrc"
+
 # __pycache__ dirs should be in ~/.cache:
 export PYTHONPYCACHEPREFIX="$XDG_CACHE_HOME/python"
 
