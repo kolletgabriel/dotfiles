@@ -3,6 +3,9 @@ padding.x = 5
 padding.y = 5
 opacity = 0.95
 
+[scrolling]
+history = 0  # leave it for tmux
+
 [font]
 normal.family = "roboto mono nerd font propo"
 size = 8
