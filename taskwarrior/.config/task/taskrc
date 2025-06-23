@@ -16,12 +16,12 @@ report.next.sort=start-,urgency-,project+
 
 # Report for GTD's inbox:
 report.inbox.description=Inbox
-report.inbox.columns=id,description.desc
+report.inbox.columns=id,description.count
 report.inbox.labels=ID,Description
 report.inbox.filter=status:pending +inbox
 
 # Report for GTD's "maybe" section:
 report.maybe.description=Maybe
-report.maybe.columns=id,description.desc
+report.maybe.columns=id,description.count
 report.maybe.labels=ID,Description
 report.maybe.filter=status:pending +maybe
