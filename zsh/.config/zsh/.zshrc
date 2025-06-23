@@ -1,4 +1,5 @@
 # Sourcing custom modules:
+source "$ZDOTDIR/functions.zsh"
 source "$ZDOTDIR/aliases.zsh"
 source "$ZDOTDIR/options.zsh"
 source "$ZDOTDIR/plugins.zsh" 
