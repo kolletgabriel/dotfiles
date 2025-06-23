@@ -27,7 +27,7 @@ require('lazy').setup({
         {import = 'plugins.treesitter'},
         {import = 'plugins.telescope'},
         {import = 'plugins.lualine'},
-        -- {import = 'plugins.bufferline'},
+        {import = 'plugins.bufferline'},
         {import = 'plugins.mason'},
         {import = 'plugins.lspconfig'},
         {import = 'plugins.cmp'},
