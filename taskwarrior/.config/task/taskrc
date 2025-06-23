@@ -10,7 +10,7 @@ urgency.tags.coefficient=0
 
 # Customizing `next` (the default) report:
 report.next.columns=id,project,tags,priority,description.count,urgency
-report.next.filter=status:pending -maybe -inbox -WAITING (pri:H or pri:M) limit:page
+report.next.filter=(status:pending -maybe -inbox -WAITING (pri:H or pri:M)) or (status:pending +ACTIVE) limit:page
 report.next.labels=ID,Project,Tags,Priority,Description,Urg.
 report.next.sort=start-,urgency-,project+
 
