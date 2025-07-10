@@ -1,12 +1,12 @@
 #!/usr/bin/zsh
 
 # `ls` and alike:
-alias l="eza -TL 0 --color --icons --group-directories-last"
-alias l1="eza -TL 1 --color --icons --group-directories-last"
+alias l="eza -TL 1 --color --icons --group-directories-last"
 alias l2="eza -TL 2 --color --icons --group-directories-last"
-alias la="eza -ATL 0 --color --icons --group-directories-last"
-alias la1="eza -ATL 1 --color --icons --group-directories-last"
+alias l3="eza -TL 3 --color --icons --group-directories-last"
+alias la="eza -ATL 1 --color --icons --group-directories-last"
 alias la2="eza -ATL 2 --color --icons --group-directories-last"
+alias la3="eza -ATL 3 --color --icons --group-directories-last"
 alias ls="ls --color=auto"
 
 # `cd` backwards:
