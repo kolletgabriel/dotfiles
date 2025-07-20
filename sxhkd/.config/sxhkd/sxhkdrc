@@ -70,6 +70,10 @@ XF86Audio{Mute,LowerVolume,RaiseVolume}
         i 5 && pkill -RTMIN+1 i3blocks\
     }
 
+# Screen Brightness:
+XF86MonBrightness{Down,Up}
+    brightnessctl set {10%-,+10%}
+
 
 # Miscelaneous
 # ==============================================================================
