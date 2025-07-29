@@ -29,8 +29,8 @@ setopt interactive_comments
 
 # Prompting:
 setopt prompt_subst
-PS1='%B%F{cyan}[%D{%T}] %f%F{yellow}%n%f%F{red}@%m%f%F{grey} ❯❯%f%b '
-PS2='%B%F{grey}❯❯ %f%b'
+PS1='%B%F{cyan} [%D{%T}] %#%f%b '
+PS2='%B%F{grey}❯ %f%b'
 
 # Zle:
 setopt nobeep

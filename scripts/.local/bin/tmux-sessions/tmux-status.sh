@@ -8,5 +8,5 @@ if [ "$?" -ne 0 ]; then
     exit 0
 fi
 
-branch="#[bg=yellow fg=black] ( 󰘬 $(git rev-parse --abbrev-ref HEAD) )"
+branch="#[bg=orange fg=black] ( 󰘬 $(git rev-parse --abbrev-ref HEAD) )"
 echo "$sess $branch $cwd"

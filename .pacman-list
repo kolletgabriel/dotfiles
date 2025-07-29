@@ -1,0 +1,78 @@
+# sistema
+brightnessctl
+zram-generator
+networkmanager
+pulseaudio
+man-pages
+pamixer
+trash-cli
+zsh
+
+# admin
+sudo
+htop
+yay
+openssh
+
+# dev
+base-devel
+docker
+git
+stow
+python-uv
+
+# ambiente grafico
+chromium
+firefox
+picom
+bspwm
+polybar
+i3lock
+alacritty
+rofi
+rofimoji
+sxhkd
+dunst
+
+# xorg
+xf86-video-amdgpu
+xorg-server
+xorg-xinit
+xclip
+
+# coreutils
+bat
+eza
+fd
+ripgrep
+fzf
+zoxide
+
+# fontes
+terminus-font
+noto-fonts
+noto-fonts-cjk
+noto-fonts-emoji
+noto-fonts-extra
+ttf-hanazono
+ttf-roboto-mono-nerd
+
+# cli
+glow
+neovim
+task
+tmux
+zk
+
+# media
+feh
+nsxiv
+mpv
+zathura
+
+# misc
+fastfetch
+xdg-utils
+shotgun
+hacksaw
+pandoc-bin  # AUR
