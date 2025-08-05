@@ -1,0 +1,46 @@
+#!/bin/sh
+
+
+problem_id="$1"
+problem_title="${@:2}"
+
+mkdir "$problem_id"
+
+cat << EOF > "$problem_id"/README.md
+# $problem_title
+
+## Tables
+
+Table: ``
+
+```
+
+```
+
+## Problem
+
+
+
+## Example
+
+### Input
+
+```
+
+```
+### Output
+
+```
+
+```
+
+### Explanation
+
+
+EOF
+
+cat << EOF > "$problem_id"/solution1.sql
+-- 
+
+
+EOF
