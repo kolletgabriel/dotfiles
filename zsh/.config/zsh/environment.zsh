@@ -27,8 +27,8 @@ export NPM_CONFIG_USERCONFIG="$XDG_CONFIG_HOME/npm/npmrc"
 export PYTHONPYCACHEPREFIX="$XDG_CACHE_HOME/python"
 
 # Default applications:
-export BROWSER="/usr/bin/firefox"
-export BROWSER2="/usr/bin/chromium"
+export BROWSER="/usr/bin/chromium"
+export BROWSER2="/usr/bin/firefox"
 export EDITOR="/usr/bin/nvim"
 export TERM="alacritty"  # for terminfo
 export TERMINAL="/usr/bin/alacritty"
