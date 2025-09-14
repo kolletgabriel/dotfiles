@@ -1,5 +1,5 @@
 [notebook]
-dir = "$NOTES"
+dir = "$NOTES0"
 
 [note]
 filename = "{{id}}-{{slug title}}"

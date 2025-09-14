@@ -32,3 +32,11 @@ export BROWSER2="/usr/bin/firefox"
 export EDITOR="/usr/bin/nvim"
 export TERM="alacritty"  # for terminfo
 export TERMINAL="/usr/bin/alacritty"
+
+# Vault:
+export VAULT="$HOME/vault"
+export NOTES0="$VAULT/1-notas"
+export NOTES1="$NOTES0/1-pessoais"
+export NOTES2="$NOTES0/2-tecnicas"
+export NOTES3="$NOTES0/3-genericas"
+export JOURNAL="$NOTES1/_diarios"
