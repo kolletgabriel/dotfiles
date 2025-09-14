@@ -55,3 +55,11 @@ alias i="task inbox"
 alias ia="task add +inbox"
 alias m="task maybe"
 alias ma="task add +maybe"
+
+# zk:
+alias zks="zk edit scratchpad.md"
+alias zkj="zk new --no-input $JOURNAL"
+alias zkjs="zk edit -i -s path- $JOURNAL"
+alias zk1="zk new $NOTES1 --title"
+alias zk2="zk new $NOTES2 --title"
+alias zk3="zk new $NOTES3 --title"
