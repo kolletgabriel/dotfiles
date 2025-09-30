@@ -2,7 +2,7 @@
 id: {{id}}
 title: "{{title}}"
 date: {{format-date now '%Y-%m-%d %H:%M:%S'}}
-tags: []
+tags: [unwritten]
 ---
 
 # {{#sh "tr '[a-z]' '[A-Z]'"}} {{title}} {{/sh}}

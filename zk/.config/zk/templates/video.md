@@ -2,13 +2,13 @@
 id: {{id}}
 title: "{{title}}"
 date: {{format-date now '%Y-%m-%d %H:%M:%S'}}
-tags: []
+tags: [video]
 ---
 
 # {{#sh "tr '[a-z]' '[A-Z]'"}} {{title}} {{/sh}}
 
+[link]()
+
+## Notes
+
 {{content}}
-
-## See Also
-
-
