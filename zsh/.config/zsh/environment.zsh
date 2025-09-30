@@ -13,6 +13,7 @@ export PATH="$HOME/.local/bin:$PATH"
 export LESSHISTFILE="$XDG_STATE_HOME/lesshst"
 export PYTHON_HISTORY="$XDG_STATE_HOME/python_history"
 export SQLITE_HISTORY="$XDG_STATE_HOME/sqlite_history"
+export NODE_REPL_HISTORY="$XDG_STATE_HOME/node_repl_history"
 
 # Xorg stuff:
 export XINITRC="$XDG_CONFIG_HOME/xorg/xinitrc"
