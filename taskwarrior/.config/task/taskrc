@@ -1,6 +1,10 @@
 news.version=3.4.1  # written by the program itself
 data.location=$XDG_DATA_HOME/task
 
+# First, shut the FUCK up:
+verbose=0
+nag=""
+
 # Simplifying urgency evaluation:
 urgency.age.coefficient=0
 urgency.annotations.coefficient=0
