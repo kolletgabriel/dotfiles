@@ -3,7 +3,7 @@ data.location=$XDG_DATA_HOME/task
 
 # First, shut the FUCK up:
 verbose=0
-nag=""
+nag=
 
 # Simplifying urgency evaluation:
 urgency.age.coefficient=0
