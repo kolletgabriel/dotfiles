@@ -7,7 +7,7 @@ tags: [video]
 
 # {{#sh "tr '[a-z]' '[A-Z]'"}} {{title}} {{/sh}}
 
-[link]()
+[link]({{extra.link}})
 
 ## Notes
 
