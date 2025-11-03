@@ -21,7 +21,7 @@ super + {_,alt +} {_,shift +, ctrl +} Print
 # Terminal utilities for quick and simple tasks:
 super + u; {p,h,n}
     ~/.local/bin/bspwm-actions/quick-term.sh {\
-        "Python" python,\
+        "Python" python -qi "$HOME/.local/bin/bspwm-actions/import_math.py",\
         "Htop" htop,\
         "Network Manager" nmtui\
     }
