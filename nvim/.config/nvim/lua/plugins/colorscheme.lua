@@ -8,9 +8,11 @@ return {
             theme = 'dragon',
             overrides = function()
                 return {
-                    bufferlinefill = {link =  'linenr'},
                     lualine_c_normal = {link =  'linenr'},
-                    cursorline = {bg = '#1a1a1a'}
+                    TelescopeNormal = {bg = '#282727'},  -- same as `linenr` but no link since it overrides other values
+                    TelescopeBorder = {bg = '#282727'},  -- ...
+                    WinSeparator = {fg = '#282727'},     -- ...
+                    CursorLine = {bg = '#1a1a1a'},
                 }
             end
         })

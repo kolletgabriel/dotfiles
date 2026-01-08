@@ -1,25 +1,37 @@
-local k = vim.keymap
-
 return {
     'nvim-telescope/telescope.nvim',
-    branch = '0.1.x',  -- Branch do repositório recomendado no guia.
-    dependencies = {'nvim-lua/plenary.nvim'},
-    -- Lazy load com o comando ou atalhos abaixo:
-    cmd = 'Telescope',
+    tag = 'v0.2.1',  -- leave it by now
+    dependencies = {
+        'nvim-lua/plenary.nvim',
+        {'nvim-telescope/telescope-fzf-native.nvim', build = 'make'}  -- performance improvement
+    },
     keys = {
-        {'<leader>ff', ':Telescope find_files<CR>'},
-        {'<leader>fg', ':Telescope live_grep<CR>'}, 
-        {'<leader>fb', ':Telescope buffers<CR>'},
+        {'<leader>T', ':Telescope<CR>', silent = true, desc = 'telescope pickers'},
+        {'<leader>ff', ':Telescope find_files<CR>', silent = true, desc = 'telescope find_files'},
+        {'<leader>fg', ':Telescope live_grep<CR>', silent = true, desc = 'telescope live_grep'}, 
+        {'<leader>fb', ':Telescope buffers<CR>', silent = true, desc = 'telescope buffers'},
+        {'<leader>fx', ':Telescope diagnostics<CR>', silent = true, desc = 'telescope LSP diagnostics'},
     },
     config = function()
         require('telescope').setup({
+            defaults = {
+                layout_strategy = 'vertical',
+                layout_config = {
+                    vertical = {preview_cutoff = 0}
+                },
+            },
             pickers = {
-                -- Configura o plugin de acordo com a funcionalidade usada:
-                find_files = {previewer = false, theme = 'dropdown'},
-                live_grep = {theme = 'dropdown'},
-                buffers = {previewer = false, theme = 'dropdown'},
+                find_files = {
+                    previewer = false,
+                    theme = 'dropdown',
+                    find_command = {'fd', '--hidden', '--color=never', '--type=f', '--exclude=.git'}
+                },
+                buffers = {
+                    previewer = false,
+                    theme = 'dropdown'
+                },
             }
         })
-    end,
-    vim.keymap.set('n', '<Leader>T', ':Telescope<Cr>', {silent = true})  -- Cria um atalho pra abrir o Telescope.
+        require('telescope').load_extension('fzf')  -- required for `fzf-native`
+    end
 }

@@ -1,9 +1,7 @@
 return {
     'windwp/nvim-autopairs',
-    event = 'InsertEnter',  -- Só carrega no modo insert.
+    -- event = 'InsertEnter',  -- eager loading so `autolist.nvim` overrides the keymap for `<CR>`
     config = function()
-        require('nvim-autopairs').setup({
-            check_ts = true  -- Recorre ao Treesitter pra incrementar a funcionalidade.
-        })
+        require('nvim-autopairs').setup({})
     end
 }

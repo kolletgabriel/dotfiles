@@ -1,28 +1,32 @@
 local o = vim.opt
 
-o.tabstop = 4  -- Tabs têm tamanho de 4 espaços.
-o.shiftwidth = 4  -- Indentações automáticas têm tamanho de 4 espaços.
-o.expandtab = true  -- O caractere `Tab` é mapeado p/ uma sequência de espaços.
+o.tabstop = 4         -- <Tab> size is the size of 4*<Space>
+o.shiftwidth = 4      -- same for auto indent
+o.expandtab = true    -- <Tab> actually maps to <Space>
+o.autoindent = true   -- helps with indentation
 
-o.ignorecase = true  -- Não diferencia maiúsculas de minúscula na busca...
-o.smartcase = true  -- ...a menos que digitemos letras maiúsculas.
+o.ignorecase = true  -- case insensitive search ...
+o.smartcase = true   -- ... except when we type uppercase characters
 
-o.number = true  -- Mostra a numeração das linhas...
-o.relativenumber = true  -- ...relativa à linha em que o cursor está.
-o.cursorline = true  -- Destaca a linha em que o cursor está.
-o.fillchars = {eob = ' '}
-o.wrap = false  -- Não expande a linha pra baixo quando ela ultrapassa o limite da tela.
-o.scrolloff = 10  -- Mantém no mínimo 10 linhas visíveis acima ou abaixo da linha em que o cursor está.
+o.number = true            -- shows line numbers ...
+o.relativenumber = true    -- ... relative to the line where the cursor is
+o.cursorline = true        -- highlights the line where the cursor is
+o.fillchars = {eob = ' '}  -- no more `~` characters
+o.wrap = false             -- don't show one single line broken into multiple ones
+o.scrolloff = 10           -- at least 10 visible lines above/below the cursor
 
-o.laststatus = 3  -- Somente uma statusline por tela.
-o.showmode = false  -- Não mostra o modo do editor abaixo da statusline.
+o.completeopt = "menuone,noinsert,noselect"  -- autocompletion behavior
+o.pumheight = 15                             -- autocompletion menu max lenght
 
-o.termguicolors = true  -- Aproveita todo o range de cores disponível no terminal.
-o.clipboard:append('unnamedplus')  -- Compartilha o clipboard com o SO.
-o.mouse:append('a')  -- Habilita o uso do mouse.
+o.laststatus = 3    -- only 1 status line per screen (and not 1 per window)
+o.showmode = false  -- no mode below the line (mode is shown in the line itself)
 
-o.swapfile = false  -- Não cria swapfiles automaticamente.
-o.backup = false  -- Não seta backups automaticamente.
+o.termguicolors = true             -- uses 24 bit colors
+o.clipboard:append('unnamedplus')  -- uses OS clipboard
+o.mouse:append('a')                -- enables mouse support
 
-o.splitright = true  -- Nova janela sempre à direita no split vertical.
-o.splitbelow = true  -- Nova janela sempre abaixo no split horizontal.
+o.swapfile = false  -- no swap files ...
+o.backup = false    -- ... and no backups
+
+o.splitright = true  -- new window when `:vsplit` goes right
+o.splitbelow = true  -- new window when `:split` goes below
