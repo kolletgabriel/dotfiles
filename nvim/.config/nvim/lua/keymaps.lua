@@ -22,3 +22,6 @@ k.set('n', '<C-Up>',    ':resize +2<CR>',          {silent = true, desc = 'incre
 k.set('n', '<C-Down>',  ':resize -2<CR>',          {silent = true, desc = 'decrease window height'})
 k.set('n', '<C-Left>',  ':vertical resize -2<CR>', {silent = true, desc = 'decrease window width'})
 k.set('n', '<C-Right>', ':vertical resize +2<CR>', {silent = true, desc = 'increase window width'})
+
+k.set('n',       'x',         '"_x', {desc = 'delete charwise w/o yanking'})
+k.set({'n','v'}, '<Leader>d', '"_d', {desc = 'delete operation w/o yanking'})
