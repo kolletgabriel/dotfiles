@@ -18,6 +18,8 @@ openssh
 # dev
 base-devel
 docker
+docker-buildx
+docker-compose
 git
 stow
 python-uv
