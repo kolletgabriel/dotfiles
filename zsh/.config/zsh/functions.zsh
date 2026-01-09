@@ -1,5 +1,5 @@
 precmd() {
-    tmux set -g status-left "$(~/.local/bin/tmux-sessions/tmux-status.sh)"
+    [ -n $TMUX ] && tmux refresh-client -S
 }
 
 eza() {
