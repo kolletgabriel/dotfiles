@@ -19,5 +19,10 @@ return {
         vim.keymap.set('n', '<Leader>zj', jrn)
         vim.keymap.set('n', '<Leader>z2', zk2)
         vim.keymap.set('n', '<Leader>z3', zk3)
+
+        require('zk.commands').add('ZkJournal', function(options)
+            options = vim.tbl_extend('force', { dir = '1-pessoais/_diarios'}, options or {})
+            require('zk').new(options)
+        end)
     end
 }
