@@ -8,6 +8,15 @@ local parsers = {
     'sql',
 }
 
+local ftypes = {
+    'sh',
+    'dockerfile',
+    'lua',
+    'markdown',
+    'python',
+    'sql',
+}
+
 return {  -- new config for the `main` branch
     'nvim-treesitter/nvim-treesitter',
     build = ':TSUpdate',
@@ -15,7 +24,7 @@ return {  -- new config for the `main` branch
         require('nvim-treesitter').install(parsers)
         vim.api.nvim_create_autocmd(
             'FileType',
-            { pattern = parsers, callback = function() vim.treesitter.start() end }
+            { pattern = ftypes, callback = function() vim.treesitter.start() end }
         )
     end
 }
