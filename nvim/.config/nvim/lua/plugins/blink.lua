@@ -2,6 +2,7 @@ return {
     'saghen/blink.cmp',
     event = {'InsertEnter', 'CmdLineEnter'},
     opts = {
+        keymap = { preset = 'enter' },
         fuzzy = {
             implementation = 'lua', -- don't install any binaries
         },
