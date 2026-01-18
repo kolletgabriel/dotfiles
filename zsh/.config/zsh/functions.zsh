@@ -1,5 +1,5 @@
 precmd() {
-    [ -n $TMUX ] && tmux refresh-client -S
+    [ -n "$TMUX" ] && tmux refresh-client -S
 }
 
 eza() {

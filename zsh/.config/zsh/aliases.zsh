@@ -55,6 +55,7 @@ alias i="task inbox"
 alias ia="task add +inbox"
 alias m="task maybe"
 alias ma="task add +maybe"
+alias tt="cl && t && i"
 
 # zk:
 alias zks="zk edit scratchpad.md"
