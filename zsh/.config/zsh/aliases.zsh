@@ -49,7 +49,7 @@ alias ff="fastfetch"
 
 # Taskwarrior:
 alias t="task"
-alias ta="task add"
+alias ta="task add pri:H"  # defaulting `pri:H` here is actually better
 alias td="task done"
 alias i="task inbox"
 alias ia="task add +inbox"
