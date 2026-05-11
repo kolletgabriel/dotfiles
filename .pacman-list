@@ -7,6 +7,7 @@ man-pages
 pamixer
 trash-cli
 unzip
+zip  # because unzip is not enough
 zsh
 
 # admin
