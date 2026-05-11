@@ -1,8 +1,15 @@
 local zk1 = function()
-    require('zk.commands').get('ZkNotes')({ hrefs = { '1-pessoais' } })
+    require('zk.commands').get('ZkNotes')({
+        hrefs = { '1-pessoais' },
+        excludeHrefs = { '1-pessoais/_diarios' }
+    })
 end
 local jrn = function()
-    require('zk.commands').get('ZkNotes')({ hrefs = { '1-pessoais/_diarios' } })
+    -- require('zk.commands').get('ZkNotes')({ hrefs = { '1-pessoais/_diarios' } })
+    require('zk.commands').get('ZkNew')({ dir = '1-pessoais/_diarios' })
+end
+local scratch = function()
+    require('zk').new({ notebook_path = '/home/kollet/vault/1-notas/scratchpad.md', {} })
 end
 local zk2 = function()
     require('zk.commands').get('ZkNotes')({ hrefs = { '2-tecnicas' } })
@@ -17,6 +24,7 @@ return {
         require('zk').setup({ picker = 'telescope' })
         vim.keymap.set('n', '<Leader>z1', zk1)
         vim.keymap.set('n', '<Leader>zj', jrn)
+        vim.keymap.set('n', '<Leader>zs', scratch)
         vim.keymap.set('n', '<Leader>z2', zk2)
         vim.keymap.set('n', '<Leader>z3', zk3)
 

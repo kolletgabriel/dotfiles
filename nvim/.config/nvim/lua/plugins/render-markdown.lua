@@ -8,6 +8,6 @@ return {
     ft = 'markdown',
     config = function()
         require('render-markdown').setup(opts)
-        vim.keymap.set('n', '<Leader>rt', ':RenderMarkdown toggle<CR>')
+        vim.keymap.set('n', '<Leader>rt', ':RenderMarkdown toggle<CR>', { silent = true })
     end
 }

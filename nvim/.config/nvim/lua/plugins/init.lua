@@ -17,6 +17,7 @@ vim.opt.rtp:prepend(lazypath)
 
 -- Start the plugin manager with the plugins:
 require('lazy').setup({
+    concurrency = 3,  -- may fix `fetch` issues
     spec = {
         {import = 'plugins.autolist'},
         {import = 'plugins.render-markdown'},

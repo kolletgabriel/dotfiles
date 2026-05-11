@@ -1,5 +1,6 @@
 return {
     'saghen/blink.cmp',
+    branch = 'v1',  -- needed for stable (by now)
     event = {'InsertEnter', 'CmdLineEnter'},
     opts = {
         keymap = { preset = 'enter' },
