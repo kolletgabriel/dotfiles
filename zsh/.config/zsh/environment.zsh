@@ -21,6 +21,9 @@ export XPROFILE="$XDG_CONFIG_HOME/xorg/xprofile"
 export XRESOURCES="$XDG_CONFIG_HOME/xorg/xresources"
 export XAUTHORITY="$XDG_RUNTIME_DIR/Xauthority"
 
+# Docker CLI config:
+export DOCKER_CONFIG="$XDG_CONFIG_HOME/docker"
+
 # npm stuff:
 export NPM_CONFIG_USERCONFIG="$XDG_CONFIG_HOME/npm/npmrc"
 
