@@ -1,20 +1,35 @@
 local parsers = {
     'bash',
+    'css',
     'dockerfile',
+    'ecma',
+    'html',
+    'html_tags',
+    'javascript',
+    'jsx',
     'lua',
     'markdown',
     'markdown_inline',
     'python',
     'sql',
+    'svelte',
+    'tsx',
 }
 
 local ftypes = {
-    'sh',
+    'css',
     'dockerfile',
+    'html',
+    'javascript',
+    'javascriptreact',
     'lua',
     'markdown',
     'python',
+    'sh',
     'sql',
+    'svelte',
+    'typescript',
+    'typescriptreact',
 }
 
 return {  -- new config for the `main` branch
