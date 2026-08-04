@@ -24,6 +24,7 @@ docker-compose
 git
 stow
 python-uv
+opencode
 
 # ambiente grafico
 chromium
